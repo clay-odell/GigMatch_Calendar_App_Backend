@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Master Calendar Update",
+    "title": "Master Calendar",
     "type": "object",
     "properties": {
-      "eventID": {
+      "masterEventID": {
         "type": "string"
       },
       "adminID": {
@@ -26,11 +26,21 @@
       },
       "venueID": {
         "type": "string"
+      },
+      "createdBy": {
+        "type": "string",
+        "enum": ["AdminUser"]
       }
     },
     "required": [
-      "eventID",
-      "adminID"
+      "masterEventID",
+      "adminID",
+      "eventName",
+      "eventDate",
+      "startTime",
+      "endTime",
+      "venueID",
+      "createdBy"
     ]
   }
   
