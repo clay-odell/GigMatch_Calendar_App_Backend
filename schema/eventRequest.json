@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#", 
+    "title": "Calendar Event Request", 
+    "type": "object", 
+    "properties": {
+       "requestId": {
+        "type": "string"
+       },
+       "userId": {
+        "type": "string"
+       },
+       "eventId": {
+        "type": "string"
+       },
+       "status": {
+        "type": "string",
+        "enum": ["Pending", "Approved", "Rejected"],
+        "default": "Pending"
+       },
+       "requestDate": {
+        "type": "string",
+        "format": "date-time"
+       }
+    },
+    "required": ["requestId", "userId", "eventId", "status", "requestDate"]
+}
